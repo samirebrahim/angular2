@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from "./header/header.component";
-import { FormsModule  } from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
@@ -13,6 +13,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { BasicHiglghtDirective } from './basic-higlght.directive';
 import { BetterHiglghtDirective } from './better/better-higlght.directive';
 import { DropDownDirective } from "./shared/dropdown.directive";
+import { ShoppingService } from "./shopping-list/shopping.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,7 @@ import { DropDownDirective } from "./shared/dropdown.directive";
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ShoppingService] ,
   bootstrap: [AppComponent]
 })
 export class AppModule { }
